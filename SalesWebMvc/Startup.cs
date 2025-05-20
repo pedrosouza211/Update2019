@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 
 namespace SalesWebMvc
 {
@@ -32,6 +33,7 @@ namespace SalesWebMvc
           );
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
