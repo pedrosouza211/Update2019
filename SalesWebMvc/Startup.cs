@@ -23,7 +23,14 @@ namespace SalesWebMvc
             services.AddControllersWithViews(); // MVC tradicional
 
             services.AddDbContext<SalesWebMvcContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcContext")));
+            options.UseMySql(
+            Configuration.GetConnectionString("SalesWebMvcContext"),
+            new MySqlServerVersion(new Version(8, 0, 34)),
+            mySqlOptions => mySqlOptions.MigrationsAssembly("SalesWebMvc")
+
+            )
+          );
+
         }
 
         // Método chamado pelo runtime para configurar o pipeline HTTP
