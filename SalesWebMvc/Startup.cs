@@ -31,6 +31,8 @@ namespace SalesWebMvc
             )
           );
 
+            services.AddScoped<SeedingService>();
+
         }
 
         // Método chamado pelo runtime para configurar o pipeline HTTP
