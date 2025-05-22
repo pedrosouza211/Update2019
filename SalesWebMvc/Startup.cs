@@ -46,7 +46,7 @@ namespace SalesWebMvc
             var enUs = new CultureInfo("en-US");
             var localizationOption = new RequestLocalizationOptions
             { 
-                DefaultRequestCulture = new RequestCulture("en-US")
+                DefaultRequestCulture = new RequestCulture("en-US"),
                 SupportedCultures = new List<CultureInfo> { enUs },
                 SupportedUICultures = new List<CultureInfo> { enUs },
 
